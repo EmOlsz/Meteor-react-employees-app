@@ -8,7 +8,7 @@ Meteor.startup(() => {
   if (!numberRecords) {
     _.times(5000, () => {
       const { name, email, phone } = helpers.createCard();
-      const avatar = image.avatar();-
+      const avatar = image.avatar();
 
       Employees.insert({
         name,
