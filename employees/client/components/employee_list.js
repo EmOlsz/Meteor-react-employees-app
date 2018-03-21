@@ -1,10 +1,12 @@
 import React from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Employees } from '../../imports/collections/employees';
+import EmployeeElement from './employee_element';
 
 const EmployeeList = (props) => {
 
   const { employees } = props;
+  console.log(employees);
 
   if (!employees.length) {
     return (
@@ -14,14 +16,15 @@ const EmployeeList = (props) => {
 
   const employee = employees.map(employee => {
     return (
-      <li key={employee._id}>
-        {employee.name}
-      </li>
+      <EmployeeElement
+        key={employee._id}
+        employee={employee}
+      />
     )
   });
 
   return (
-    <ul>
+    <ul className="employee-list">
       {employee}
     </ul>
   )

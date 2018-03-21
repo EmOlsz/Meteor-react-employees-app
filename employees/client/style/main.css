@@ -1,0 +1,15 @@
+.employee-list {
+    margin: 25px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.employee-list-element {
+    width: 300px;
+}
+
+.employee-list-element .name {
+    text-align: center;
+}
