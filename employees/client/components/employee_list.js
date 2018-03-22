@@ -36,7 +36,7 @@ class EmployeeList extends Component {
     });
 
     return (
-      <div>
+      <div className="employee-list-container">
         <ul className="employee-list">
           {employee}
         </ul>
